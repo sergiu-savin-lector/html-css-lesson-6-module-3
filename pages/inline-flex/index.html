@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>Flexbox - Inline-flex</title>
+    <style>
+      .wrapper {
+        background: lightblue;
+      }
+
+      .wrapper + .wrapper {
+        margin-top: 16px;
+      }
+
+      .wrapper1 {
+        width: 400px;
+        display: inline-flex;
+      }
+
+      .wrapper2 {
+        width: 400px;
+        display: flex;
+      }
+
+      .wrapper3 {
+        display: flex;
+      }
+
+      .wrapper4 {
+        display: inline-flex;
+      }
+
+      .wrapper1 > * {
+        flex: 1;
+        margin: auto;
+      }
+
+      .wrapper2 > * {
+        flex: 1;
+        margin: auto;
+      }
+
+      .wrapper3 > * {
+        flex: 1;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary">Inline flex</h1>
+      <article>
+        <p>
+          <em>display: inline-flex</em> nu face ca elementele flexibile să se
+          afișeze în linie. El afiseaza containerul flexibil (elementul cu
+          proprietatea [...]) să fie afișat în linie. Aceasta este singura
+          diferență dintre <em>display: inline-flex</em> și
+          <em>display: flex</em>.
+        </p>
+        <p>
+          O comparație similară poate fi făcută între
+          <em>display: inline-block</em> și
+          <em>display: block</em>
+        </p>
+      </article>
+      <section class="section-examples">
+        <div class="wrapper wrapper1">
+          <header>header</header>
+          <nav>nav</nav>
+          <aside>aside</aside>
+          <main>main</main>
+          <footer>footer</footer>
+        </div>
+        text after inline-flex (with width)
+        <div class="wrapper wrapper2">
+          <header>header</header>
+          <nav>nav</nav>
+          <aside>aside</aside>
+          <main>main</main>
+          <footer>footer</footer>
+        </div>
+        text after flex (with width)
+        <div class="wrapper wrapper3">
+          <header>header</header>
+          <nav>nav</nav>
+          <aside>aside</aside>
+          <main>main</main>
+          <footer>footer</footer>
+        </div>
+        flex without width
+
+        <div class="wrapper wrapper4">
+          <header>header</header>
+          <nav>nav</nav>
+          <aside>aside</aside>
+          <main>main</main>
+          <footer>footer</footer>
+        </div>
+        inline-flex without width
+      </section>
+    </main>
+  </body>
+</html>

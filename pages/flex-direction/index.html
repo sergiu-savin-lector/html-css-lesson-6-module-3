@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>Flexbox - Flex-direction (Axa principala)</title>
+    <style>
+      .cards {
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+      }
+
+      .card {
+        background-color: lightblue;
+        border: 1px solid white;
+        height: 60px;
+        width: 60px;
+        font-size: 2rem;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary">Containerul și elementul flex</h1>
+      <article>
+        <p>
+          Proprietatea CSS flex-direction stabilește modul în care elementele
+          flexibile sunt plasate în containerul flexibil, definind axa
+          principală și direcția (normală sau inversată).
+        </p>
+      </article>
+      <section class="section-examples">
+        <div class="cards">
+          <div class="card">1</div>
+          <div class="card">2</div>
+          <div class="card">3</div>
+          <div class="card">4</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

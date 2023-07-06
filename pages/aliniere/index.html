@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>Flexbox - Aliniere (justify-content, align-items)</title>
+    <style>
+      .hero-container {
+        background: lightskyblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Axa Principala */
+        align-items: center; /* Axa Secundara  */
+        height: 400px;
+      }
+
+      .flex-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .flex-item {
+        background: tomato;
+        padding: 5px;
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+      }
+
+      .box {
+        display: flex;
+        align-items: center;
+      }
+
+      .box-item {
+        padding: 8px;
+        border: 1px solid tomato;
+      }
+
+      .box-item + .box-item {
+        margin-left: 16px;
+      }
+
+      /*
+      .box-item:nth-child(3) {
+        align-self: stretch;
+      }*/
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary">Containerul și elementul flex</h1>
+      <article>
+        <p>
+          O operatiune destul de laborioasa cu alte tehnici. <br />
+          In flexbox ajunge sa setam container-ului directia de coloana si sa
+          centram elementele pe axa principla si transversala.
+        </p>
+        <p>
+          Centrarea elementelor pe ambele axe poate fi folosita pentru crearea
+          unei sectiuni hero in care continutul sa fie centrat pe ambele axe.
+        </p>
+      </article>
+      <section class="section-examples">
+        <div class="hero-container">
+          <h1 class="hero-message">Let's learn fullstack</h1>
+        </div>
+      </section>
+      <section class="section-examples">
+        <h2>justify-content</h2>
+        <ul class="flex-container flex-start">
+          <li class="flex-item">1</li>
+          <li class="flex-item">2</li>
+          <li class="flex-item">3</li>
+          <li class="flex-item">4</li>
+          <li class="flex-item">5</li>
+        </ul>
+      </section>
+      <section class="section-examples">
+        <div class="box">
+          <div class="box-item">One</div>
+          <div class="box-item">Two</div>
+          <div class="box-item">Three <br />has <br />extra <br />text</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

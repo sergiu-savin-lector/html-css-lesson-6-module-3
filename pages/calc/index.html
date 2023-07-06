@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>Flexbox - calc()</title>
+    <style>
+      .boxes {
+        display: flex;
+      }
+      .boxes > div {
+        outline: 1px solid black;
+        padding: 16px 8px;
+      }
+      .box-1 {
+        width: 50%;
+        color: white;
+        background: purple;
+      }
+      .box-2 {
+        width: calc(50% - 100px);
+        color: white;
+        background: orange;
+      }
+      .box-3 {
+        width: 100px;
+        color: white;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary">Functia calc() si flexbox</h1>
+      <article>
+        <p>
+          calc() este o funcție care execută sau „calculează” o ecuație din
+          interiorul parantezelor
+        </p>
+        <p>
+          calc() este pentru a calcula valori. Singurul loc în care puteți
+          utiliza funcția calc() este în valori. Vedeți aceste exemple în care
+          setăm valoarea pentru un număr de proprietăți diferite.
+        </p>
+        <!-- prettier-ignore -->
+        <code>
+            .el {
+                font-size: calc(10% + 2px);
+                width:     calc(100% - 20px);
+                height:    calc(50% - 20px);
+                padding:   calc(15% + 5px);
+            }
+
+            .el {
+                margin: 10px calc(20% + 5px);
+                border-radius: 15px calc(15px / 3) 4px 2px;
+            }
+        </code>
+        <p>De ce am folosi calc() in loc sa setam valorile pur si simplu?</p>
+        <!-- prettier-ignore -->
+        <code>
+            .el {
+                /* Mai usor de inteles */
+                width: calc(100% / 7);
+
+                /* Decat asta */
+                width: 14.2857142857%;
+            }
+        </code>
+      </article>
+      <section class="section-examples">
+        <div class="boxes">
+          <div class="box-1">One</div>
+          <div class="box-2">Two</div>
+          <div class="box-3">Three</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

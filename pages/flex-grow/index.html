@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>Flexbox - flex-grow, flex-basis</title>
+    <style>
+      .parent {
+        background-color: lightblue;
+        display: flex;
+      }
+
+      /*
+        Valoare default pentru flex; Poate fi scrisa si:
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+
+            .child {
+                flex: [flex-grow] [flex-shrink] [flex-basis];
+            }
+
+            .child {
+                flex: [max] [min] [ideal size];
+            }
+        */
+      .child {
+        padding: 16px;
+        border: 1px solid white;
+        background-color: blue;
+        color: white;
+        flex: 0 1 auto;
+      }
+
+      .child-four {
+        flex: 0 0 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary">
+        Proprietățile elementelor flex: width și flex-basis, flex-grow,
+        flex-shrink
+      </h1>
+      <section>
+        <p>Putem sa scriem pentru fiecare o valoare de forma</p>
+        <!-- prettier-ignore -->
+        <code>
+            .child {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+              }
+        </code>
+        <p>In practica, folosim prescurtarea (shorthand css):</p>
+        <!-- prettier-ignore -->
+        <code>
+            .child {
+                flex: [flex-grow] [flex-shrink] [flex-basis];
+            }
+
+            .child {
+                flex: [max] [min] [ideal size];
+            }
+        </code>
+        <p>flex-grow - defineste dimensiunea maxima a unui element.</p>
+        <dl>
+          <dt>flex-grow: 0</dt>
+          <dd>
+            In general, vrem ca elementele noastre sa isi modifice dimensiunea
+            elementului sa fie definita de continut, nu de celelalte elemente.
+          </dd>
+          <dt>flex-grow: 1</dt>
+          <dd>
+            Toate elementele iau o portiune egala din .parent, daca continutul
+            este acelasi
+          </dd>
+          <dt>flex-grow: 3</dt>
+          <dd>
+            Elementul va incerca sa creasca in dimensiune pana &times;3
+            dimensiunea celorlalte doua
+          </dd>
+        </dl>
+        <p>flex-shrink - defineste dimensiunea minima a unui element.</p>
+        <dl>
+          <dt>flex-shrink: 1</dt>
+          <dd>
+            Spune elementului „Ocupă aceeași cantitate de spațiu în orice
+            moment”.
+          </dd>
+          <dt>flex-shrink: 0</dt>
+          <dd>
+            Atunci îi spunem acestui element să nu se micșoreze deloc acum
+          </dd>
+        </dl>
+        <p>
+          flex-basis - este ultima valoare adăugată în prescurtarea flex: și așa
+          îi spunem unui element să respecte o dimensiune ideală.
+        </p>
+        <dl>
+          <dt>flex-basis: auto</dt>
+          <dd>Spune elementului „Folosește-ți înălțimea sau lățimea.”.</dd>
+          <dt>flex-basis: 100%</dt>
+          <dd>
+            Pentru a face ca toate elementele să ocupe întregul spațiu al
+            părintelui putem fie seta .child{width: 100%}, sau putem seta
+            flex-basisc la 100%.
+          </dd>
+          <dt>flex-basis: 1000px</dt>
+          <dd>
+            încearcă să ocupi 1000 px de spațiu. Dacă acest lucru nu este
+            posibil, atunci elementul va ocupa atât de mult spațiu proporțional
+            cu celelalte elemente.
+          </dd>
+        </dl>
+      </section>
+      <section class="section-examples">
+        <div class="parent">
+          <div class="child child-one" contenteditable>child</div>
+          <div class="child child-two" contenteditable>
+            This is some longer content
+          </div>
+          <div class="child child-three" contenteditable>child</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

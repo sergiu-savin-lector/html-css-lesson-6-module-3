@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>Flexbox - Containerul și elementul flex</title>
+    <style>
+      .cards {
+        background-color: blue;
+        display: flex;
+        width: 500px;
+      }
+
+      .card {
+        background-color: lightblue;
+        height: 60px;
+        width: 60px;
+        font-size: 2rem;
+        color: white;
+      }
+
+      .card + .card {
+        margin-left: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary">Containerul și elementul flex</h1>
+      <article>
+        <p>
+          Este un model de layout in CSS3. Are scopul de a oferi un mod mai
+          eficient pentru realizarea layout-urilor web, de a alinia si distribui
+          spatiul intre elemente inauntrul unui container chiar si atunci cand
+          dimensiunea nu este cunoscuta sau este dinamica. Intr-un layout
+          construit cu flexbox proprietatile elementelor (largime, inaltime,
+          ordine de vizualizare) se pot schimba pentru a ocupa in mod optim
+          spatiul disponibil. Un container flex expandeaza elementele pentru a
+          ocupa spatiul gol sau le reduce pentru preveni un overflow. In ceea ce
+          priveste directia, layout-urile flexbox nu sunt directionale, cum este
+          cazul elementelor block (care se dezvolta in verticala) sau
+          elementelor inline (care se dezvolta pe orizontala).
+        </p>
+      </article>
+      <section class="section-examples">
+        <div class="cards">
+          <div class="card">1</div>
+          <div class="card">2</div>
+          <div class="card">3</div>
+          <div class="card">4</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

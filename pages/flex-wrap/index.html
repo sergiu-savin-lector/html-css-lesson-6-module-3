@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>Flexbox - flex-wrap</title>
+    <style>
+      /* Common Styles */
+      .content,
+      .content1,
+      .content2 {
+        color: #fff;
+        font: 100 24px/100px sans-serif;
+        height: 150px;
+        width: 897px;
+        text-align: center;
+      }
+
+      .content div,
+      .content1 div,
+      .content2 div {
+        height: 50%;
+        width: 300px;
+      }
+      .red {
+        background: orangered;
+      }
+      .green {
+        background: yellowgreen;
+      }
+      .blue {
+        background: steelblue;
+      }
+
+      /* Flexbox Styles */
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .content1 {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .content2 {
+        display: flex;
+        flex-wrap: wrap-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary">
+        Containere flex cu mai multe linii - Flex-wrap
+      </h1>
+      <article>
+        <p>
+          O operatiune destul de laborioasa cu alte tehnici. <br />
+          In flexbox ajunge sa setam container-ului directia de coloana si sa
+          centram elementele pe axa principla si transversala.
+        </p>
+        <p>
+          Centrarea elementelor pe ambele axe poate fi folosita pentru crearea
+          unei sectiuni hero in care continutul sa fie centrat pe ambele axe.
+        </p>
+      </article>
+      <section class="section-examples">
+        <h2>Exemplu pentru flex-wrap:wrap</h2>
+        <div class="content">
+          <div class="red">1</div>
+          <div class="green">2</div>
+          <div class="blue">3</div>
+        </div>
+        <h2>Exemplu pentru flex-wrap:nowrap</h2>
+        <div class="content1">
+          <div class="red">1</div>
+          <div class="green">2</div>
+          <div class="blue">3</div>
+        </div>
+        <h2>Exemplu pentru flex-wrap:wrap-reverse</h2>
+        <div class="content2">
+          <div class="red">1</div>
+          <div class="green">2</div>
+          <div class="blue">3</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
